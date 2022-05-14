@@ -1,0 +1,32 @@
+body {
+  background-color: antiquewhite;
+}
+
+.main-container {
+  background-color: aqua;
+  /* justify-content: center;
+  align-items: center; */
+  margin-left: 10vw;
+  margin-right: 20vw;
+  margin-top: 8vh;
+  border-radius: 10px;
+  height: 82vh;
+  width: 78vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-nav {
+  background-color: aliceblue;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  padding-block: 2rem;
+}
+
+h1 {
+  text-align: center;
+}

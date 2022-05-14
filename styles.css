@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+html {
+    --primaryGradient: linear-gradient(93.12deg, #581b98 0.52%, #9c1de7 100%);
+    --secondaryGradient: linear-gradient( 268.91deg, #581b98 -2.14%, #9c1de7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #fb8500;
+}
+
+:root {
+    --primary: #000000;
+    --dark: #fff;
+    --pure: whitesmoke;
+    --smoke: whitesmoke;
+    --dark-gray: #999;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background: var(--dark);
+    color: var(--pure);
+}
+
+html,
+body {
+    /* overflow-x: hidden; */
+}
+
+.brand {
+    font-size: 3vw;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.image {
+    width: 50%;
+    position: absolute;
+    top: 4rem;
+    margin-bottom: 30rem;
+    border-radius: 30px;
+    left: 1.5rem;
+    z-index: 11;
+    background-color: #eaf3fa;
+    border-radius: 49% 51% 52% 48% / 40% 56% 44% 60%;
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    -ms-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    -o-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #212223;
+    padding: 0 2vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    z-index: 12;
+    /* width: 100%; */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-wrapper ul.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.nav-wrapper ul.nav-list li {
+    margin-left: 30px;
+    padding: 20px 0;
+    position: relative;
+    /* width: 100%; */
+}
+
+.nav-wrapper ul.nav-list li a {
+    color: var(--pure);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+    /* width: 100%;
+   */
+}
+
+.nav-wrapper ul.nav-list li a:hover,
+.nav-wrapper ul.nav-list li.active a {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobile .hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.mobile .hamburger span {
+    background: var(--pure);
+    width: 28px;
+    height: 2px;
+    margin-bottom: 8px;
+}
+
+.mobile ul.nav-list {
+    background: -webkit-linear-gradient(45deg, #434343, #000000);
+    background: linear-gradient(45deg, #434343, #000000);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger,
+.brand {
+    z-index: 9999;
+}
+
+.mobile ul.nav-list.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile .hamburger span {
+    transform-origin: left;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile ul.nav-list li a {
+    font-size: 20px;
+}
+
+.mobile .nav-wrapper ul li:hover .dropdown-list {
+    height: max-content;
+    padding-top: 6px;
+}
+
+.mobile ul.nav-list li {
+    margin-left: 0;
+    text-align: center;
+}
+
+.mobile .nav-wrapper ul.dropdown-list li a {
+    color: var(--dark-gray);
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+.shape-new {
+    width: 100%;
+    height: 48vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #023047;
+    /* border-radius: 0% 0% 100% 25% / 0% 0% 41% 32%; */
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: url(3506328.jpg);
+    background-size: cover;
+}
+
+
+/* .shape-new:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+} */
+
+.shape-new2 {
+    width: 50%;
+    height: 45vw;
+    top: 1000px;
+    position: absolute;
+    background-color: #ffb703;
+    border-radius: 41% 59% 52% 48% / 30% 50% 50% 70%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    -ms-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    -o-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.19);
+    margin-left: 20vw;
+}
+
+#text {
+    color: #fb8500;
+    font-weight: bolder;
+    font-size: 5vw;
+    position: absolute;
+    top: 15vw;
+    right: 70vw;
+    align-items: center;
+}
+
+#container1 {
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+#text {
+    background-color: #242526;
+    border-radius: 41% 59% 52% 48% / 30% 50% 50% 70%;
+    width: 26vw;
+    height: 20vw;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 6vw;
+    z-index: 1;
+}
+
+.shape-new4 {
+    width: 26vw;
+    height: 20vw;
+    top: 22vw;
+    left: -17vw;
+    position: absolute;
+    background-color: #242526;
+    border-radius: 41% 59% 52% 48% / 30% 50% 50% 70%;
+    margin: 0;
+    padding: 0;
+    margin-left: 20vw;
+    z-index: 0;
+}
+
+
+/* kz */
+
+body:not(.dyslexia-mode) main:before {
+    background: #971e1e;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: -4px;
+    transform: rotate(-2.5deg);
+}
+
+body:not(.dyslexia-mode) main:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    left: -6px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
+
+
+/* main function */
+
+.dyslexia-mode {
+    letter-spacing: 0.35ch;
+    word-spacing: 1.225ch;
+    /* 3.5x letter-spacing */
+    font-variant-ligatures: none;
+    /* explicitly disable ligatures */
+    font-weight: 600;
+    /* demi-bold */
+    font-size: 150%;
+    /* assuming 16px base size, convert to 18pt */
+}
+
+.dyslexia-mode main {
+    line-height: 2.0;
+}
+
+.dyslexia-mode main p {
+    margin-top: 3.5em;
+}
+
+.dyslexia-mode strong {
+    color: #000;
+}
+
+.dyslexia-mode h2 {
+    border: none;
+    border-bottom: thin grey solid;
+    /* just keeping the bottom border for this element, to retain some separation */
+    max-width: 100%;
+    /* standard width */
+    transform: none;
+    /* do not rotate */
+    background-color: inherit;
+    /* We no longer look like a label, so we don't require our own background */
+    margin-bottom: 1em;
+    padding-left: 0;
+    /* some spacing adjustments */
+}
+
+
+/* .dyslexia-mode main li:nth-of-type(odd) {
+    background-color: palegoldenrod;
+} */
+
+
+/* dyslexia button */
+
+#dyslexia-toggle {
+    padding: .5em;
+    font-size: 18pt;
+    font-weight: bold;
+    float: right;
+}
+
+.dyslexia-mode #dyslexia-toggle {
+    background-color: #0f4b65;
+    color: #fff;
+}
